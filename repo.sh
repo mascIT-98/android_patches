@@ -43,14 +43,7 @@ echo -e "Patching Settings.."
 cd $top_build
 cd packages/apps/Settings
 git fetch https://github.com/hastalafiesta-/android_packages_apps_Settings.git kitkat
-git cherry-pick 3c343576292b82507feaaed10ea10aa317d2ee40
-
-echo -e "Patching vendor/pa.."
-cd $top_build
-cd vendor/pa
-git fetch https://github.com/hastalafiesta-/android_vendor_pa.git kitkat
-git cherry-pick c92ee59114de8163707339ae295b60df5e62b23e
-git cherry-pick d1adf323ea667b33a918dfb1de671ba17d3aa3f4
+git cherry-pick 496cb6d27eb9e0662f78f559fc802f13bc536c9e
 
 echo -e "Patching frameworks/av.."
 cd $top_build
