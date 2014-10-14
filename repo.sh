@@ -7,7 +7,6 @@ top_build="$(dirname $top_patches)"
 echo -e "Deleting old repos"
 rm -rf $top_build/build
 rm -rf $top_build/device/samsung/janice
-rm -rf $top_build/packages/services/Telephony
 rm -rf $top_build/packages/apps/Settings
 
 echo -e "Repo sync"
@@ -19,6 +18,11 @@ cd build
 git fetch https://github.com/hastalafiesta-/android_build.git kitkat
 git cherry-pick 3c71484c3efa476e66c05c7fe953d0948d779083
 git cherry-pick 84a1d1672995a51bd7c6130b0cf7e6e6e2f5511d
+
+echo -e "Patching vendor/pa.."
+cd build
+git fetch https://github.com/hastalafiesta-/android_vendor_pa.git kitkat
+git cherry-pick 0c3769d0582f73785e7e3185afb3c8ebbdf24071
 
 echo -e "Patching device/samsung/janice.."
 cd $top_build
@@ -33,17 +37,12 @@ git fetch https://github.com/hastalafiesta-/android_device_samsung_u8500-common.
 git cherry-pick 05897d17faa6af5ce0ebc50b64670f1b84c9eb46
 git cherry-pick d1ea13cc2bc5ed6976eb5df00e168e80b51a4f4f
 
-echo -e "Patching telephony.."
-cd $top_build
-cd packages/services/Telephony
-git fetch https://github.com/hastalafiesta-/android_packages_services_Telephony.git kitkat
-git cherry-pick 247248d955cff22a968c0f0133a47da9381e55fd
-
 echo -e "Patching Settings.."
 cd $top_build
 cd packages/apps/Settings
 git fetch https://github.com/hastalafiesta-/android_packages_apps_Settings.git kitkat
-git cherry-pick 496cb6d27eb9e0662f78f559fc802f13bc536c9e
+git cherry-pick a80e3e831b0b19f4ee9cca6ef391fb489874da8c
+git cherry-pick 9f6a454df763b7b85a4fd1d3936224676e62500f
 
 echo -e "Patching frameworks/av.."
 cd $top_build
