@@ -24,7 +24,8 @@ git cherry-pick dc0a6596eb93756b2768ed87525540a0eea9aacc
 git cherry-pick 7b22bba3009d6b4ae34db645db290829bf887b61
 
 echo -e "Patching vendor/pa.."
-cd build
+cd $top_build
+cd vendor/pa
 git fetch https://github.com/hastalafiesta-/android_vendor_pa.git kitkat
 git cherry-pick 0c3769d0582f73785e7e3185afb3c8ebbdf24071
 
