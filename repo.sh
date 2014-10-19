@@ -53,7 +53,8 @@ echo -e "Patching frameworks/av.."
 cd $top_build
 cd frameworks/av
 git fetch https://github.com/t4n017/android_frameworks_av.git kitkat
-git cherry-pick 14ff212688a8407d9a27b7be7638a25a3e2958a9
+git cherry-pick c360847102cdaf5090ba8a2a82d29601b5f3096d
+git cherry-pick 967ecc079e6a41285a4aa7dc924fa45be8325dbf
 
 echo -e "Patching frameworks/base.."
 cd $top_build
