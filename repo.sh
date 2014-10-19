@@ -42,6 +42,12 @@ git fetch https://github.com/hastalafiesta-/android_device_samsung_u8500-common.
 git cherry-pick 05897d17faa6af5ce0ebc50b64670f1b84c9eb46
 git cherry-pick d1ea13cc2bc5ed6976eb5df00e168e80b51a4f4f
 
+echo -e "Patching packages/services/Telephony.."
+cd $top_build
+cd packages/services/Telephony
+git fetch https://github.com/CyanogenMod/android_packages_services_telephony.git cm-11.0
+git cherry-pick a41865df81c1ace95ee874788ae878fe966b8af6
+
 echo -e "Patching Settings.."
 cd $top_build
 cd packages/apps/Settings
