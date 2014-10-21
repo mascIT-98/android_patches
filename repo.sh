@@ -24,8 +24,9 @@ git cherry-pick a3636ccc05645189236d035f5b73764f19a25dff
 echo -e "Patching vendor/pa.."
 cd $top_build
 cd vendor/pa
-git fetch https://github.com/t4n017/android_vendor_pa.git kitkat
-git cherry-pick 46aba5834dac7201f2c5f5027f0046353ee813b5
+git fetch https://github.com/hastalafiesta-/android_vendor_pa.git kitkat
+git cherry-pick 0c3769d0582f73785e7e3185afb3c8ebbdf24071
+git cherry-pick 4a33942b3f50658282264a50e90df176a5d736ff
 
 echo -e "Patching device/samsung/janice.."
 cd $top_build
