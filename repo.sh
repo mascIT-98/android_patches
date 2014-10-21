@@ -16,12 +16,10 @@ repo sync
 
 echo -e "Patching build.."
 cd build
-git fetch https://github.com/hastalafiesta-/android_build.git kitkat
-git cherry-pick 3c71484c3efa476e66c05c7fe953d0948d779083
-git cherry-pick 84a1d1672995a51bd7c6130b0cf7e6e6e2f5511d
 git fetch https://github.com/t4n017/android_build.git kitkat
 git cherry-pick e7e37aaa4c3545ea7b59efe7bfac44e48e6a8d1a
 git cherry-pick 7b22bba3009d6b4ae34db645db290829bf887b61
+git cherry-pick a3636ccc05645189236d035f5b73764f19a25dff
 
 echo -e "Patching vendor/pa.."
 cd $top_build
@@ -32,23 +30,23 @@ git cherry-pick 0c3769d0582f73785e7e3185afb3c8ebbdf24071
 echo -e "Patching device/samsung/janice.."
 cd $top_build
 cd device/samsung/janice
-git fetch https://github.com/hastalafiesta-/android_device_samsung_janice.git pa
+git fetch https://github.com/t4n017/android_device_samsung_janice.git pa
 git cherry-pick 9d048e654cedc98025c59f47cf0b24612b75dd92
 
 echo -e "Patching device/samsung/u8500-common.."
 cd $top_build
 cd device/samsung/u8500-common
-git fetch https://github.com/hastalafiesta-/android_device_samsung_u8500-common.git pa
-git cherry-pick 05897d17faa6af5ce0ebc50b64670f1b84c9eb46
+git fetch https://github.com/t4n017/android_device_samsung_u8500-common.git pa
 git cherry-pick d1ea13cc2bc5ed6976eb5df00e168e80b51a4f4f
 
 
 echo -e "Patching Settings.."
 cd $top_build
 cd packages/apps/Settings
-git fetch https://github.com/hastalafiesta-/android_packages_apps_Settings.git kitkat
-git cherry-pick a80e3e831b0b19f4ee9cca6ef391fb489874da8c
-git cherry-pick 9f6a454df763b7b85a4fd1d3936224676e62500f
+git fetch https://github.com/t4n017/android_packages_apps_Settings.git kitkat
+git cherry-pick 3c343576292b82507feaaed10ea10aa317d2ee40
+git cherry-pick b484b6746abeca93c7e0601c9d24e3595dfdc25c
+git cherry-pick 8186eb6e823cd52af8c5650a402e2ad4a46dcad6
 
 echo -e "Patching frameworks/av.."
 cd $top_build
