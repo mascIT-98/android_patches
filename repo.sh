@@ -47,7 +47,6 @@ cd packages/apps/Settings
 git fetch https://github.com/t4n017/android_packages_apps_Settings.git kitkat
 git cherry-pick 3c343576292b82507feaaed10ea10aa317d2ee40
 git cherry-pick b484b6746abeca93c7e0601c9d24e3595dfdc25c
-git cherry-pick 8186eb6e823cd52af8c5650a402e2ad4a46dcad6
 
 echo -e "Patching frameworks/av.."
 cd $top_build
