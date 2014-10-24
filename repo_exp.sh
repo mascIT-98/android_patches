@@ -17,8 +17,8 @@ repo sync
 echo -e "Patching build.."
 cd build
 git fetch https://github.com/t4n017/android_build.git kitkat
-git cherry-pick e7e37aaa4c3545ea7b59efe7bfac44e48e6a8d1a
-git cherry-pick 7b22bba3009d6b4ae34db645db290829bf887b61
+git cherry-pick 4d22c4e62bf23ec5b10c5891dffd5232cb2190df
+git cherry-pick 6fcc49f9b0978022a1fe56f422beef36bcc6c525
 git cherry-pick a3636ccc05645189236d035f5b73764f19a25dff
 
 echo -e "Patching vendor/pa.."
@@ -45,8 +45,9 @@ echo -e "Patching Settings.."
 cd $top_build
 cd packages/apps/Settings
 git fetch https://github.com/t4n017/android_packages_apps_Settings.git kitkat
-git cherry-pick d501828f2a9d16b05a46c124d1f83aeb5cf05ff5
-git cherry-pick 3b0f24f8668ed8a1ab87e7e0e6bd071dac48ebd1
+git cherry-pick aa50446b0c966412b627a9fbb3de2d58613507b7
+git cherry-pick 300c80230c4746b09d6e2b2af7154f12e472432a
+git cherry-pick 92dabcbe9898a59d4311550ee4bf1661058dea57
 
 echo -e "Patching frameworks/av.."
 cd $top_build
