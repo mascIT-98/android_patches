@@ -8,6 +8,7 @@ echo -e "Deleting old repos"
 rm -rf $top_build/build
 rm -rf $top_build/device/samsung/janice
 rm -rf $top_build/packages/apps/Settings
+rm -rf $top_build/frameworks/base
 rm -rf $top_build/vendor/pa
 
 echo -e "Repo sync"
